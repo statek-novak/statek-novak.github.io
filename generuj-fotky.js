@@ -21,7 +21,8 @@ const dated = files.map(f => {
 dated.sort((a, b) => b.ts - a.ts || a.soubor.localeCompare(b.soubor, 'cs'));
 
 const popis = f => {
-  const base = f.replace(EXT, '').replace(/[-_]+/g, ' ').trim();
+  let base = f.replace(EXT, '').replace(/[-_]+/g, ' ').trim();
+  base = base.replace(/^stroj\s*(\d+)$/i, 'Stroj $1');
   return base.charAt(0).toUpperCase() + base.slice(1);
 };
 
