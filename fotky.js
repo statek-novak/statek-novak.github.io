@@ -1,9 +1,5 @@
 window.FOTKY = [
   {
-    "soubor": "stroj-test.jpg",
-    "popis": "Stroj test"
-  },
-  {
     "soubor": "stroj1.jpg",
     "popis": "Stroj 1"
   },
