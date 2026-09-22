@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statek Novák Jarpice - Kamenice</title>
+<meta name="description" content="Rodinná zemědělská farma ve Středních Čechách. Rostlinná a živočišná výroba.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1a;
+    --muted: #5c5c56;
+    --line: #dcdcd4;
+    --accent: #2f5d33;
+    --panel: #f6f6f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16171a;
+      --fg: #ecece8;
+      --muted: #a2a29a;
+      --line: #32343a;
+      --accent: #8fbf95;
+      --panel: #1e2024;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px 64px; }
+  header { border-bottom: 1px solid var(--line); padding: 28px 0 0; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; line-height: 1.25; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  nav { display: flex; gap: 4px; flex-wrap: wrap; }
+  nav button {
+    font: inherit; font-size: .95rem; cursor: pointer;
+    background: none; border: 0; border-bottom: 2px solid transparent;
+    color: var(--muted); padding: 10px 14px; margin-bottom: -1px;
+  }
+  nav button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+  section { display: none; padding-top: 28px; }
+  section[data-active] { display: block; }
+  h2 { font-size: 1.15rem; margin: 28px 0 10px; }
+  h2:first-child { margin-top: 0; }
+  p { margin: 0 0 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; }
+  .card p:last-child { margin-bottom: 0; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
+  dt { color: var(--muted); }
+  dd { margin: 0; }
+  a { color: var(--accent); }
+  .gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  .gal a { display: block; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+  .gal img { display: block; width: 100%; height: 190px; object-fit: cover; }
+  .gal span { display: block; padding: 8px 10px; font-size: .85rem; color: var(--muted); }
+  .pub img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+  .empty { color: var(--muted); font-style: italic; }
+  footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+  @media (max-width: 480px) { dl { grid-template-columns: 1fr; gap: 2px 0; } dt { margin-top: 8px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Statek Novák Jarpice - Kamenice</h1>
+  <p class="sub">Rodinná zemědělská farma ve Středních Čechách</p>
+  <nav>
+    <button data-tab="uvod" aria-selected="true">Úvod</button>
+    <button data-tab="fotogalerie" aria-selected="false">Fotogalerie</button>
+    <button data-tab="publicita" aria-selected="false">Publicita</button>
+  </nav>
+</header>
+
+<section id="uvod" data-active>
+  <p>Statek Novák Jarpice - Kamenice je rodinnou zemědělskou farmou se sídlem ve Středních
+  Čechách, která vedle rostlinné výroby (obiloviny, luštěniny, olejoviny, cukrová řepa,
+  vojtěška) chová v rámci živočišné výroby cca 1000 VDJ skotu s produkcí mléka,
+  cca 6000 ks prasat a i další hospodářská zvířata (ovce, kozy, slepice, koně).</p>
+
+  <h2>Kontakt</h2>
+  <div class="card">
+    <dl>
+      <dt>Pavel Novák</dt><dd><a href="tel:+420602305375">+420 602 305 375</a></dd>
+      <dt>Pavel Novák</dt><dd><a href="tel:+420606239015">+420 606 239 015</a></dd>
+      <dt>Václav Novák</dt><dd><a href="tel:+420602116511">+420 602 116 511</a></dd>
+      <dt>E-mail</dt><dd><a href="mailto:novakjarpice@seznam.cz">novakjarpice@seznam.cz</a></dd>
+    </dl>
+  </div>
+
+  <h2>Adresy</h2>
+  <div class="card">
+    <dl>
+      <dt>Sídlo firmy</dt><dd>Vraný - Horní Kamenice 4, 273 72 Jarpice</dd>
+      <dt>Kancelář</dt><dd>Jarpice 29, 273 72 Jarpice</dd>
+      <dt>Korespondenční</dt><dd>273 72 Jarpice č.p. 29</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="fotogalerie">
+  <div class="gal" id="gal"></div>
+</section>
+
+<section id="publicita" class="pub">
+  <h2>Technologie snižující emise GHG a NH3</h2>
+  <p>Projekt byl spolufinancován Evropskou unií. Investice do snižování emisí
+  v živočišné výrobě.</p>
+  <p><a href="publicita/publicita-emise-zv-2025.pdf">Otevřít původní plakát v PDF</a></p>
+  <img src="publicita/publicita-emise-zv-2025.jpg" alt="Plakát publicity projektu Technologie snižující emise GHG a NH3, spolufinancováno Evropskou unií">
+</section>
+
+<footer>Statek Novák Jarpice - Kamenice</footer>
+</div>
+
+<script src="fotky.js"></script>
+<script>
+(function () {
+  var nav = document.querySelector('nav');
+  nav.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-tab]');
+    if (!btn) return;
+    nav.querySelectorAll('button').forEach(function (b) {
+      b.setAttribute('aria-selected', String(b === btn));
+    });
+    document.querySelectorAll('section').forEach(function (s) {
+      s.toggleAttribute('data-active', s.id === btn.dataset.tab);
+    });
+    history.replaceState(null, '', '#' + btn.dataset.tab);
+  });
+
+  var start = location.hash.slice(1);
+  if (start) {
+    var b = nav.querySelector('button[data-tab="' + start + '"]');
+    if (b) b.click();
+  }
+
+  var gal = document.getElementById('gal');
+  var list = window.FOTKY || [];
+  if (!list.length) {
+    gal.innerHTML = '<p class="empty">Zatím zde nejsou žádné fotografie.</p>';
+    return;
+  }
+  gal.innerHTML = list.map(function (f) {
+    var src = 'img/' + f.soubor;
+    return '<a href="' + src + '"><img src="' + src + '" alt="' + f.popis +
+           '" loading="lazy"><span>' + f.popis + '</span></a>';
+  }).join('');
+})();
+</script>
+</body>
+</html>

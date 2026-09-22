@@ -1,0 +1,36 @@
+name: Aktualizovat seznam fotek
+
+on:
+  push:
+    paths:
+      - 'img/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fotky
+  cancel-in-progress: false
+
+jobs:
+  generuj:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - run: node generuj-fotky.js
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet fotky.js; then
+            echo "Beze změny."
+          else
+            git add fotky.js
+            git commit -m "Aktualizace seznamu fotek"
+            git push
+          fi
