@@ -1,5 +1,13 @@
 window.FOTKY = [
   {
+    "soubor": "Publicitaautomat.jpg",
+    "popis": "Publicitaautomat"
+  },
+  {
+    "soubor": "Publicitakanaly.jpg",
+    "popis": "Publicitakanaly"
+  },
+  {
     "soubor": "stroj1.jpg",
     "popis": "Stroj 1"
   },
