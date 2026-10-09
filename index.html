@@ -145,9 +145,9 @@
   pub.innerHTML = docs.length ? docs.map(function (d) {
     var pdf = 'publicita/' + encodeURIComponent(d.soubor);
     var jpg = 'publicita/' + encodeURIComponent(d.nahled);
-    return '<figure><a href="' + pdf + '"><img src="' + jpg + '" alt="' + d.popis +
+    return '<figure><a href="' + pdf + '" target="_blank" rel="noopener"><img src="' + jpg + '" alt="' + d.popis +
            '" loading="lazy"></a><figcaption>' + d.popis + ' - <a href="' + pdf +
-           '">Otevřít PDF</a></figcaption></figure>';
+           '" target="_blank" rel="noopener">Otevřít PDF</a></figcaption></figure>';
   }).join('') : '<p class="empty">Zatím zde nejsou žádné dokumenty.</p>';
 
   var gal = document.getElementById('gal');
@@ -158,7 +158,7 @@
   }
   gal.innerHTML = list.map(function (f) {
     var src = 'img/' + f.soubor;
-    return '<a href="' + src + '"><img src="' + src + '" alt="' + f.popis +
+    return '<a href="' + src + '" target="_blank" rel="noopener"><img src="' + src + '" alt="' + f.popis +
            '" loading="lazy"><span>' + f.popis + '</span></a>';
   }).join('');
 })();
