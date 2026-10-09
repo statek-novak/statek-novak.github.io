@@ -1,9 +1,10 @@
-name: Aktualizovat seznam fotek
+name: Aktualizovat seznam fotek a PDF
 
 on:
   push:
     paths:
       - 'img/**'
+      - 'publicita/**'
   workflow_dispatch:
 
 permissions:
@@ -21,16 +22,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: node generuj-fotky.js
+      - run: pip install pymupdf
+
+      - run: python prevod-pdf.py
+
+      - run: node generuj-seznamy.js
 
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet fotky.js; then
+          git add -A fotky.js publicita.js publicita
+          if git diff --cached --quiet; then
             echo "Beze změny."
           else
-            git add fotky.js
-            git commit -m "Aktualizace seznamu fotek"
+            git commit -m "Aktualizace seznamu fotek a PDF"
             git push
           fi

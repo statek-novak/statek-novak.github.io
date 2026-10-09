@@ -57,7 +57,9 @@
   .gal a { display: block; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); text-decoration: none; color: inherit; }
   .gal img { display: block; width: 100%; height: 190px; object-fit: cover; }
   .gal span { display: block; padding: 8px 10px; font-size: .85rem; color: var(--muted); }
-  .pub img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+  .pub figure { margin: 0 0 32px; }
+  .pub img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+  .pub figcaption { margin-top: 8px; font-size: .9rem; color: var(--muted); }
   .empty { color: var(--muted); font-style: italic; }
   footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
   @media (max-width: 480px) { dl { grid-template-columns: 1fr; gap: 2px 0; } dt { margin-top: 8px; } }
@@ -107,17 +109,16 @@
 </section>
 
 <section id="publicita" class="pub">
-  <h2>Technologie snižující emise GHG a NH3</h2>
-  <p>Projekt byl spolufinancován Evropskou unií. Investice do snižování emisí
-  v živočišné výrobě.</p>
-  <p><a href="publicita/publicita-emise-zv-2025.pdf">Otevřít původní plakát v PDF</a></p>
-  <img src="publicita/publicita-emise-zv-2025.jpg" alt="Plakát publicity projektu Technologie snižující emise GHG a NH3, spolufinancováno Evropskou unií">
+  <h2>Projekty spolufinancované Evropskou unií</h2>
+  <p>Kliknutím na plakát se otevře v PDF.</p>
+  <div id="pub"></div>
 </section>
 
 <footer>Statek Novák Jarpice - Kamenice</footer>
 </div>
 
 <script src="fotky.js"></script>
+<script src="publicita.js"></script>
 <script>
 (function () {
   var nav = document.querySelector('nav');
@@ -138,6 +139,16 @@
     var b = nav.querySelector('button[data-tab="' + start + '"]');
     if (b) b.click();
   }
+
+  var pub = document.getElementById('pub');
+  var docs = window.PUBLICITA || [];
+  pub.innerHTML = docs.length ? docs.map(function (d) {
+    var pdf = 'publicita/' + encodeURIComponent(d.soubor);
+    var jpg = 'publicita/' + encodeURIComponent(d.nahled);
+    return '<figure><a href="' + pdf + '"><img src="' + jpg + '" alt="' + d.popis +
+           '" loading="lazy"></a><figcaption>' + d.popis + ' - <a href="' + pdf +
+           '">Otevřít PDF</a></figcaption></figure>';
+  }).join('') : '<p class="empty">Zatím zde nejsou žádné dokumenty.</p>';
 
   var gal = document.getElementById('gal');
   var list = window.FOTKY || [];
