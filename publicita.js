@@ -1,14 +1,14 @@
 window.PUBLICITA = [
   {
-    "soubor": "publicita/Jarpice - Budenice - jimka mriz.jpg",
-    "nahled": "publicita/Jarpice - Budenice - jimka mriz.jpg",
-    "popis": "Jarpice - Budenice - jimka mriz",
-    "typ": "foto"
-  },
-  {
     "soubor": "publicita/automat info.jpg",
     "nahled": "publicita/automat info.jpg",
     "popis": "Automat info",
+    "typ": "foto"
+  },
+  {
+    "soubor": "publicita/Jarpice - Budenice - jimka mriz.jpg",
+    "nahled": "publicita/Jarpice - Budenice - jimka mriz.jpg",
+    "popis": "Jarpice - Budenice - jimka mriz",
     "typ": "foto"
   },
   {
