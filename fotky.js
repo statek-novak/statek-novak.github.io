@@ -1,46 +1,20 @@
 window.FOTKY = [
   {
-    "soubor": "Projekt_detail_2.jpeg",
-    "popis": "Projekt detail 2"
+    "soubor": "img/stroj1.jpg",
+    "nahled": "img/stroj1.jpg",
+    "popis": "Stroj 1",
+    "typ": "foto"
   },
   {
-    "soubor": "Foto1.jpeg",
-    "popis": "Foto1"
+    "soubor": "img/stroj2.jpg",
+    "nahled": "img/stroj2.jpg",
+    "popis": "Stroj 2",
+    "typ": "foto"
   },
   {
-    "soubor": "Projekt_2.jpeg",
-    "popis": "Projekt 2"
-  },
-  {
-    "soubor": "Projekt_3.jpeg",
-    "popis": "Projekt 3"
-  },
-  {
-    "soubor": "Projekt_4.jpeg",
-    "popis": "Projekt 4"
-  },
-  {
-    "soubor": "Projekt_detail_3.jpeg",
-    "popis": "Projekt detail 3"
-  },
-  {
-    "soubor": "Projekt_detail.jpeg",
-    "popis": "Projekt detail"
-  },
-  {
-    "soubor": "Projekt.jpeg",
-    "popis": "Projekt"
-  },
-  {
-    "soubor": "stroj1.jpg",
-    "popis": "Stroj 1"
-  },
-  {
-    "soubor": "stroj2.jpg",
-    "popis": "Stroj 2"
-  },
-  {
-    "soubor": "stroj3.jpg",
-    "popis": "Stroj 3"
+    "soubor": "img/stroj3.jpg",
+    "nahled": "img/stroj3.jpg",
+    "popis": "Stroj 3",
+    "typ": "foto"
   }
 ];

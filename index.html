@@ -55,11 +55,12 @@
   a { color: var(--accent); }
   .gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
   .gal a { display: block; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); text-decoration: none; color: inherit; }
-  .gal img { display: block; width: 100%; height: 190px; object-fit: cover; }
+  .gal img, .gal video { display: block; width: 100%; height: 190px; object-fit: cover; }
+  .gal video { background: #000; }
   .gal span { display: block; padding: 8px 10px; font-size: .85rem; color: var(--muted); }
-  .pub figure { margin: 0 0 32px; }
-  .pub img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
-  .pub figcaption { margin-top: 8px; font-size: .9rem; color: var(--muted); }
+  .gal b { font-size: .75rem; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 5px; margin-right: 6px; }
+  .pub .gal { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .pub .gal img, .pub .gal video { height: 340px; object-fit: contain; }
   .empty { color: var(--muted); font-style: italic; }
   footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
   @media (max-width: 480px) { dl { grid-template-columns: 1fr; gap: 2px 0; } dt { margin-top: 8px; } }
@@ -110,8 +111,8 @@
 
 <section id="publicita" class="pub">
   <h2>Projekty spolufinancované Evropskou unií</h2>
-  <p>Kliknutím na plakát se otevře v PDF.</p>
-  <div id="pub"></div>
+  <p>Kliknutím se plakát nebo fotka otevře v plné velikosti.</p>
+  <div class="gal" id="pub"></div>
 </section>
 
 <footer>Statek Novák Jarpice - Kamenice</footer>
@@ -140,27 +141,26 @@
     if (b) b.click();
   }
 
-  var pub = document.getElementById('pub');
-  var docs = window.PUBLICITA || [];
-  pub.innerHTML = docs.length ? docs.map(function (d) {
-    var pdf = 'publicita/' + encodeURIComponent(d.soubor);
-    var jpg = 'publicita/' + encodeURIComponent(d.nahled);
-    return '<figure><a href="' + pdf + '" target="_blank" rel="noopener"><img src="' + jpg + '" alt="' + d.popis +
-           '" loading="lazy"></a><figcaption>' + d.popis + ' - <a href="' + pdf +
-           '" target="_blank" rel="noopener">Otevřít PDF</a></figcaption></figure>';
-  }).join('') : '<p class="empty">Zatím zde nejsou žádné dokumenty.</p>';
+  var url = function (p) { return p.split('/').map(encodeURIComponent).join('/'); };
+  var esc = function (s) {
+    return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
+  };
 
-  var gal = document.getElementById('gal');
-  var list = window.FOTKY || [];
-  if (!list.length) {
-    gal.innerHTML = '<p class="empty">Zatím zde nejsou žádné fotografie.</p>';
-    return;
+  function vypis(id, list, prazdno) {
+    var el = document.getElementById(id);
+    el.innerHTML = list.length ? list.map(function (f) {
+      var znacka = f.typ === 'pdf' ? '<b>PDF</b>' : f.typ === 'video' ? '<b>VIDEO</b>' : '';
+      var obr = f.typ === 'video'
+        ? '<video src="' + url(f.soubor) + '#t=0.1" muted playsinline preload="metadata"></video>'
+        : '<img src="' + url(f.nahled) + '" alt="' + esc(f.popis) + '" loading="lazy">';
+      var odkaz = f.typ === 'foto' ? f.nahled : f.soubor;
+      return '<a href="' + url(odkaz) + '" target="_blank" rel="noopener">' + obr +
+             '<span>' + znacka + esc(f.popis) + '</span></a>';
+    }).join('') : '<p class="empty">' + prazdno + '</p>';
   }
-  gal.innerHTML = list.map(function (f) {
-    var src = 'img/' + f.soubor;
-    return '<a href="' + src + '" target="_blank" rel="noopener"><img src="' + src + '" alt="' + f.popis +
-           '" loading="lazy"><span>' + f.popis + '</span></a>';
-  }).join('');
+
+  vypis('pub', window.PUBLICITA || [], 'Zatím zde nejsou žádné dokumenty.');
+  vypis('gal', window.FOTKY || [], 'Zatím zde nejsou žádné fotografie.');
 })();
 </script>
 </body>
