@@ -1,11 +1,5 @@
 window.PUBLICITA = [
   {
-    "soubor": "publicita/Nakup pudoochranne technologie.jpeg",
-    "nahled": "publicita/Nakup pudoochranne technologie.jpeg",
-    "popis": "Nakup pudoochranne technologie",
-    "typ": "foto"
-  },
-  {
     "soubor": "publicita/automat info.jpg",
     "nahled": "publicita/automat info.jpg",
     "popis": "Automat info",
