@@ -51,7 +51,7 @@ a kliknout na záložku **Fotogalerie** nebo **Publicita**.
 
 Nový soubor je vždy úplně nahoře. PDF a videa mají u popisku značku **PDF** nebo **VIDEO**.
 
-Pokud tam ještě není, obnovit stránku klávesami **Ctrl + F5** a chvíli počkat.
+Pokud tam ještě není, chvíli počkat a stránku obnovit. Soubor znovu nenahrávat, jen počkat.
 Web se needituje ručně, aktualizuje se sám.
 
 ## Smazání nebo výměna
