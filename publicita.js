@@ -1,11 +1,5 @@
 window.PUBLICITA = [
   {
-    "soubor": "publicita/test-smazat.jpg",
-    "nahled": "publicita/test-smazat.jpg",
-    "popis": "test-smazat",
-    "typ": "foto"
-  },
-  {
     "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- e202.jpg",
     "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- e202.jpg",
     "popis": "Publicita - jímka Kobylníky - PHOTO- e202",
