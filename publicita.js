@@ -1,14 +1,14 @@
 window.PUBLICITA = [
   {
-    "soubor": "publicita/Publicita - kanály - PHOTO-202.jpg",
-    "nahled": "publicita/Publicita - kanály - PHOTO-202.jpg",
-    "popis": "Publicita - kanály - PHOTO-202",
-    "typ": "foto"
-  },
-  {
     "soubor": "publicita/Publicita - automat - PHOTO-202.jpg",
     "nahled": "publicita/Publicita - automat - PHOTO-202.jpg",
     "popis": "Publicita - automat - PHOTO-202",
+    "typ": "foto"
+  },
+  {
+    "soubor": "publicita/Publicita - kanály - PHOTO-202.jpg",
+    "nahled": "publicita/Publicita - kanály - PHOTO-202.jpg",
+    "popis": "Publicita - kanály - PHOTO-202",
     "typ": "foto"
   },
   {
