@@ -10,11 +10,5 @@ window.DATA = [
     "nahled": "data/nahledy/rekonstrukce-jimek-a-kejdove-kanaly.pdf.jpg",
     "popis": "Rekonstrukce jimek a kejdove kanaly",
     "typ": "pdf"
-  },
-  {
-    "soubor": "data/Technologie-snizujici-emise-GHG-a-NH3.pdf",
-    "nahled": "data/nahledy/Technologie-snizujici-emise-GHG-a-NH3.pdf.jpg",
-    "popis": "Technologie snizujici emise GHG a NH3",
-    "typ": "pdf"
   }
 ];
