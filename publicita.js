@@ -1,17 +1,5 @@
 window.PUBLICITA = [
   {
-    "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- e202.jpg",
-    "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- e202.jpg",
-    "popis": "Publicita - jímka Kobylníky - PHOTO- e202",
-    "typ": "foto"
-  },
-  {
-    "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- g202.jpg",
-    "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- g202.jpg",
-    "popis": "Publicita - jímka Kobylníky - PHOTO- g202",
-    "typ": "foto"
-  },
-  {
     "soubor": "publicita/Publicita - Jarpice - Budenice - jímka -PHOTO- b202.jpg",
     "nahled": "publicita/Publicita - Jarpice - Budenice - jímka -PHOTO- b202.jpg",
     "popis": "Publicita - Jarpice - Budenice - jímka -PHOTO- b202",
@@ -27,6 +15,18 @@ window.PUBLICITA = [
     "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- d202.jpg",
     "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- d202.jpg",
     "popis": "Publicita - jímka Kobylníky - PHOTO- d202",
+    "typ": "foto"
+  },
+  {
+    "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- e202.jpg",
+    "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- e202.jpg",
+    "popis": "Publicita - jímka Kobylníky - PHOTO- e202",
+    "typ": "foto"
+  },
+  {
+    "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- g202.jpg",
+    "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- g202.jpg",
+    "popis": "Publicita - jímka Kobylníky - PHOTO- g202",
     "typ": "foto"
   },
   {
