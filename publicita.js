@@ -12,6 +12,12 @@ window.PUBLICITA = [
     "typ": "foto"
   },
   {
+    "soubor": "publicita/test-smazat.jpg",
+    "nahled": "publicita/test-smazat.jpg",
+    "popis": "test-smazat",
+    "typ": "foto"
+  },
+  {
     "soubor": "publicita/Publicita - Jarpice - Budenice - jímka -PHOTO- b202.jpg",
     "nahled": "publicita/Publicita - Jarpice - Budenice - jímka -PHOTO- b202.jpg",
     "popis": "Publicita - Jarpice - Budenice - jímka -PHOTO- b202",
