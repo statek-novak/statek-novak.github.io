@@ -76,6 +76,7 @@
     <button data-tab="uvod" aria-selected="true">Úvod</button>
     <button data-tab="fotogalerie" aria-selected="false">Fotogalerie</button>
     <button data-tab="publicita" aria-selected="false">Publicita</button>
+    <button data-tab="data" aria-selected="false">Data</button>
   </nav>
 </header>
 
@@ -111,8 +112,14 @@
 
 <section id="publicita" class="pub">
   <h2>Projekty spolufinancované Evropskou unií</h2>
-  <p>Kliknutím se plakát nebo fotka otevře v plné velikosti.</p>
+  <p>Kliknutím se fotka otevře v plné velikosti.</p>
   <div class="gal" id="pub"></div>
+</section>
+
+<section id="data" class="pub">
+  <h2>Dokumenty</h2>
+  <p>Kliknutím se dokument otevře v plné velikosti.</p>
+  <div class="gal" id="dat"></div>
 </section>
 
 <footer>Statek Novák Jarpice - Kamenice</footer>
@@ -166,6 +173,7 @@
   }
 
   nacti('publicita.js', function () { vypis('pub', window.PUBLICITA || [], 'Zatím zde nejsou žádné dokumenty.'); });
+  nacti('data.js', function () { vypis('dat', window.DATA || [], 'Zatím zde nejsou žádné dokumenty.'); });
   nacti('fotky.js', function () { vypis('gal', window.FOTKY || [], 'Zatím zde nejsou žádné fotografie.'); });
 })();
 </script>

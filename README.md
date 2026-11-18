@@ -6,10 +6,14 @@ Web: **https://statek-novak.github.io**
 
 # Jak přidat fotku nebo PDF na web
 
-Fotky, PDF i krátká videa se dají nahrát do obou záložek:
+Fotky, PDF i krátká videa se dají nahrát do těchto záložek:
 
 - složka **img** = záložka **Fotogalerie**
-- složka **publicita** = záložka **Publicita**
+- složka **publicita** = záložka **Publicita** (jen schválené fotky k dotaci, nic jiného)
+- složka **data** = záložka **Data** (PDF dokumenty)
+- složka **archiv** = na webu se nezobrazuje, jen úschova starých souborů
+
+V záložce **Publicita** se popisek zobrazí přesně podle názvu souboru, i s háčky a čárkami.
 
 Web umí zobrazit:
 
@@ -37,7 +41,7 @@ Mezery a pomlčky nevadí. Háčky a čárky raději vynechat.
 
 1. Otevřít https://github.com/statek-novak/statek-novak.github.io
 2. Přihlásit se (jméno `statek-novak`).
-3. Kliknout na složku **img** (Fotogalerie) nebo **publicita** (Publicita).
+3. Kliknout na složku **img** (Fotogalerie), **publicita** (Publicita) nebo **data** (Data).
 4. Vpravo nahoře **Add file** → **Upload files**.
 5. Přetáhnout soubory myší do okna prohlížeče.
 6. Sjet dolů a kliknout na zelené tlačítko **Commit changes**.
@@ -47,7 +51,7 @@ Najednou se dá přetáhnout i víc souborů. Jeden soubor může mít nejvýš 
 ## 3. Zkontrolovat, že se soubor zobrazil
 
 Počkat asi dvě minuty, pak otevřít **https://statek-novak.github.io**
-a kliknout na záložku **Fotogalerie** nebo **Publicita**.
+a kliknout na záložku **Fotogalerie**, **Publicita** nebo **Data**.
 
 Nový soubor je vždy úplně nahoře. PDF a videa mají u popisku značku **PDF** nebo **VIDEO**.
 
@@ -66,11 +70,12 @@ Složku **nahledy** vytváří web sám, nic v ní neměnit.
 
 # O webu
 
-Web má tři záložky:
+Web má čtyři záložky:
 
 - **Úvod** - popis firmy, telefony, adresy
 - **Fotogalerie** - fotky, PDF a videa, po kliknutí se otevřou v plné velikosti
-- **Publicita** - plakáty, fotky, PDF a videa k projektům spolufinancovaným EU
+- **Publicita** - schválené fotky k projektům spolufinancovaným EU
+- **Data** - PDF dokumenty k projektům
 
 Stránka funguje na mobilu i na počítači a sama se přizpůsobí
 světlému nebo tmavému režimu.
@@ -96,10 +101,13 @@ Je to nastavení v **Settings → Pages**, stránka se kvůli tomu nemusí před
 | `index.html` | Celá stránka - text, vzhled, záložky |
 | `img/` | Soubory do Fotogalerie (sem se nahrávají nové) |
 | `publicita/` | Soubory do Publicity (sem se nahrávají nové) |
-| `img/nahledy/`, `publicita/nahledy/` | Náhledy PDF a fotek z iPhonu, vytváří se samy - needitovat |
+| `data/` | Soubory do záložky Data (sem se nahrávají nová PDF) |
+| `archiv/` | Staré soubory, na webu se nezobrazují |
+| `img/nahledy/`, `publicita/nahledy/`, `data/nahledy/` | Náhledy PDF a fotek z iPhonu, vytváří se samy - needitovat |
 | `fotky.js` | Seznam Fotogalerie, vytváří se sám - needitovat |
 | `publicita.js` | Seznam Publicity, vytváří se sám - needitovat |
-| `generuj-seznamy.js` | Program, který oba seznamy vytváří |
+| `data.js` | Seznam záložky Data, vytváří se sám - needitovat |
+| `generuj-seznamy.js` | Program, který seznamy vytváří |
 | `prevod-nahledy.py` | Vytváří náhledy z PDF a fotek z iPhonu |
 | `.github/workflows/fotky.yml` | Spouští obnovu seznamů po nahrání souboru |
 

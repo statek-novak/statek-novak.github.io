@@ -15,7 +15,7 @@ const popis = f => {
   return base.charAt(0).toUpperCase() + base.slice(1);
 };
 
-const seznam = dir => {
+const seznam = (dir, nazev = popis) => {
   const files = fs.existsSync(dir)
     ? fs.readdirSync(dir).filter(f => FOTO.test(f) || PREVOD.test(f) || VIDEO.test(f)) : [];
   const dated = files.map(f => {
@@ -32,17 +32,21 @@ const seznam = dir => {
   return dated.map(({ soubor }) => ({
     soubor: dir + '/' + soubor,
     nahled: PREVOD.test(soubor) ? dir + '/nahledy/' + soubor + '.jpg' : dir + '/' + soubor,
-    popis: popis(soubor),
+    popis: nazev(soubor),
     typ: typ(soubor)
   }));
 };
 
 const fotky = seznam('img');
-const publicita = seznam('publicita');
+// The grant inspector checks Publicita captions against the client's exact file names.
+const publicita = seznam('publicita', f => path.parse(f).name.normalize('NFC'));
+const data = seznam('data');
 
 fs.writeFileSync('fotky.js',
   'window.FOTKY = ' + JSON.stringify(fotky, null, 2) + ';\n');
 fs.writeFileSync('publicita.js',
   'window.PUBLICITA = ' + JSON.stringify(publicita, null, 2) + ';\n');
+fs.writeFileSync('data.js',
+  'window.DATA = ' + JSON.stringify(data, null, 2) + ';\n');
 
-console.log(`fotky.js: ${fotky.length} souborů, publicita.js: ${publicita.length} souborů`);
+console.log(`fotky.js: ${fotky.length} souborů, publicita.js: ${publicita.length} souborů, data.js: ${data.length} souborů`);

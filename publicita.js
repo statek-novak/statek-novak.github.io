@@ -1,80 +1,56 @@
 window.PUBLICITA = [
   {
-    "soubor": "publicita/Nakup pudoochranne technologie.jpeg",
-    "nahled": "publicita/Nakup pudoochranne technologie.jpeg",
-    "popis": "Nakup pudoochranne technologie",
+    "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- e202.jpg",
+    "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- e202.jpg",
+    "popis": "Publicita - jímka Kobylníky - PHOTO- e202",
     "typ": "foto"
   },
   {
-    "soubor": "publicita/automat info.jpg",
-    "nahled": "publicita/automat info.jpg",
-    "popis": "Automat info",
+    "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- g202.jpg",
+    "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- g202.jpg",
+    "popis": "Publicita - jímka Kobylníky - PHOTO- g202",
     "typ": "foto"
   },
   {
-    "soubor": "publicita/Jarpice - Budenice - jimka mriz.jpg",
-    "nahled": "publicita/Jarpice - Budenice - jimka mriz.jpg",
-    "popis": "Jarpice - Budenice - jimka mriz",
+    "soubor": "publicita/Publicita - Jarpice - Budenice - jímka -PHOTO- b202.jpg",
+    "nahled": "publicita/Publicita - Jarpice - Budenice - jímka -PHOTO- b202.jpg",
+    "popis": "Publicita - Jarpice - Budenice - jímka -PHOTO- b202",
     "typ": "foto"
   },
   {
-    "soubor": "publicita/Jarpice - Budenice - jimka.jpg",
-    "nahled": "publicita/Jarpice - Budenice - jimka.jpg",
-    "popis": "Jarpice - Budenice - jimka",
+    "soubor": "publicita/Publicita - Jarpice - Budenice - jímka -PHOTO-202.jpg",
+    "nahled": "publicita/Publicita - Jarpice - Budenice - jímka -PHOTO-202.jpg",
+    "popis": "Publicita - Jarpice - Budenice - jímka -PHOTO-202",
     "typ": "foto"
   },
   {
-    "soubor": "publicita/jimka Kobylniky.jpg",
-    "nahled": "publicita/jimka Kobylniky.jpg",
-    "popis": "Jimka Kobylniky",
+    "soubor": "publicita/Publicita - jímka Kobylníky - PHOTO- d202.jpg",
+    "nahled": "publicita/Publicita - jímka Kobylníky - PHOTO- d202.jpg",
+    "popis": "Publicita - jímka Kobylníky - PHOTO- d202",
     "typ": "foto"
   },
   {
-    "soubor": "publicita/kanaly info.jpg",
-    "nahled": "publicita/kanaly info.jpg",
-    "popis": "Kanaly info",
+    "soubor": "publicita/Publicita - mlékomat - PHOTO- c202.jpg",
+    "nahled": "publicita/Publicita - mlékomat - PHOTO- c202.jpg",
+    "popis": "Publicita - mlékomat - PHOTO- c202",
     "typ": "foto"
   },
   {
-    "soubor": "publicita/mlekomat vrata.jpg",
-    "nahled": "publicita/mlekomat vrata.jpg",
-    "popis": "Mlekomat vrata",
+    "soubor": "publicita/Publicita - mlékomat - PHOTO-202.jpg",
+    "nahled": "publicita/Publicita - mlékomat - PHOTO-202.jpg",
+    "popis": "Publicita - mlékomat - PHOTO-202",
     "typ": "foto"
   },
   {
-    "soubor": "publicita/mlekomat.jpg",
-    "nahled": "publicita/mlekomat.jpg",
-    "popis": "Mlekomat",
+    "soubor": "publicita/Publicita - Páleček - kanály a jímka PHOTO- b202.jpg",
+    "nahled": "publicita/Publicita - Páleček - kanály a jímka PHOTO- b202.jpg",
+    "popis": "Publicita - Páleček - kanály a jímka PHOTO- b202",
     "typ": "foto"
   },
   {
-    "soubor": "publicita/Palecek - kanaly a jimka plot.jpg",
-    "nahled": "publicita/Palecek - kanaly a jimka plot.jpg",
-    "popis": "Palecek - kanaly a jimka plot",
+    "soubor": "publicita/Publicita - Páleček - kanály a jímka PHOTO-202.jpg",
+    "nahled": "publicita/Publicita - Páleček - kanály a jímka PHOTO-202.jpg",
+    "popis": "Publicita - Páleček - kanály a jímka PHOTO-202",
     "typ": "foto"
-  },
-  {
-    "soubor": "publicita/Palecek - kanaly a jimka.jpg",
-    "nahled": "publicita/Palecek - kanaly a jimka.jpg",
-    "popis": "Palecek - kanaly a jimka",
-    "typ": "foto"
-  },
-  {
-    "soubor": "publicita/prodejni-automat-na-mleko.pdf",
-    "nahled": "publicita/nahledy/prodejni-automat-na-mleko.pdf.jpg",
-    "popis": "Prodejni automat na mleko",
-    "typ": "pdf"
-  },
-  {
-    "soubor": "publicita/rekonstrukce-jimek-a-kejdove-kanaly.pdf",
-    "nahled": "publicita/nahledy/rekonstrukce-jimek-a-kejdove-kanaly.pdf.jpg",
-    "popis": "Rekonstrukce jimek a kejdove kanaly",
-    "typ": "pdf"
-  },
-  {
-    "soubor": "publicita/Technologie-snizujici-emise-GHG-a-NH3.pdf",
-    "nahled": "publicita/nahledy/Technologie-snizujici-emise-GHG-a-NH3.pdf.jpg",
-    "popis": "Technologie snizujici emise GHG a NH3",
-    "typ": "pdf"
   }
 ];
